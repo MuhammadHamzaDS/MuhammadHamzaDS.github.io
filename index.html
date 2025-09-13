@@ -4,56 +4,151 @@
   <meta charset="UTF-8">
   <title>Hamza's Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+    /* Reset */
+    * {
       margin: 0;
       padding: 0;
-      text-align: center;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      line-height: 1.6;
+    }
+
     header {
-      background: #333;
-      color: white;
-      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
     }
-    h1 {
-      margin: 0;
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-in-out;
     }
+
+    header p {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
     section {
-      margin: 40px;
-      padding: 20px;
-      background: white;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #ffcc70;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #ffcc70;
+      display: block;
+      margin: 10px auto;
+      border-radius: 2px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 15px 0;
+      padding: 15px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, background 0.3s ease;
     }
+
+    ul li:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
     a {
-      color: #0066cc;
+      color: #ffcc70;
       text-decoration: none;
+      font-weight: bold;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      margin-top: 40px;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Hero Section -->
   <header>
     <h1>👋 Hi, I’m Hamza</h1>
-    <p>Data Science Learner | Python Developer</p>
+    <p>🚀 Data Science Learner | Python Developer | Future CSS Officer</p>
   </header>
 
+  <!-- Projects -->
   <section>
-    <h2>🚀 Projects</h2>
+    <h2>My Projects</h2>
     <ul>
-      <li>Student Performance Prediction (Python, ML)</li>
-      <li>Pharmacy Management System (SQL + Python)</li>
-      <li>Multi-Brain Collaborative IDE (FYP)</li>
+      <li><b>📊 Student Performance Prediction</b> – Machine Learning project using Python & Scikit-learn.</li>
+      <li><b>💊 Pharmacy Management System</b> – Database + GUI system using SQL Server & Python.</li>
+      <li><b>🧑‍💻 Multi-Brain Collaborative IDE</b> – Final Year Project with real-time code collaboration.</li>
     </ul>
   </section>
 
+  <!-- Contact -->
   <section>
-    <h2>📞 Contact</h2>
-    <p>Email: yourmail@example.com</p>
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
     <p>GitHub: <a href="https://github.com/hamza123" target="_blank">github.com/hamza123</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/hamza123" target="_blank">linkedin.com/in/hamza123</a></p>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Hamza | Built with ❤️ in Python & Web</p>
+  </footer>
 </body>
 </html>
