@@ -12,143 +12,138 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
       line-height: 1.6;
     }
 
     header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 60px 20px;
       text-align: center;
-      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
 
     header h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-      animation: fadeInDown 1s ease-in-out;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      animation: fadeInDown 1.5s ease;
     }
 
     header p {
       font-size: 1.2rem;
       color: #f0f0f0;
-      animation: fadeInUp 1s ease-in-out;
     }
 
     section {
-      padding: 60px 20px;
       max-width: 1000px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(1.02);
     }
 
     h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2.5rem;
-      color: #ffcc70;
-      position: relative;
-    }
-
-    h2::after {
-      content: '';
-      width: 80px;
-      height: 4px;
-      background: #ffcc70;
-      display: block;
-      margin: 10px auto;
-      border-radius: 2px;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      border-bottom: 2px solid #00eaff;
+      display: inline-block;
+      padding-bottom: 5px;
     }
 
     ul {
       list-style: none;
-      padding: 0;
+      margin-top: 15px;
     }
 
     ul li {
-      background: rgba(255, 255, 255, 0.1);
-      margin: 15px 0;
+      background: rgba(0, 234, 255, 0.1);
+      margin: 10px 0;
       padding: 15px;
-      border-radius: 10px;
-      transition: transform 0.3s ease, background 0.3s ease;
+      border-left: 5px solid #00eaff;
+      border-radius: 8px;
+      transition: background 0.3s ease;
     }
 
     ul li:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(0, 234, 255, 0.3);
     }
 
     a {
-      color: #ffcc70;
+      color: #00eaff;
       text-decoration: none;
-      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: #ff4081;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0,0,0,0.8);
       margin-top: 40px;
+      font-size: 0.9rem;
+      color: #aaa;
     }
 
     /* Animations */
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
+    @media(max-width: 768px) {
       header h1 {
-        font-size: 2.5rem;
-      }
-      h2 {
         font-size: 2rem;
+      }
+      section {
+        margin: 20px;
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Hero Section -->
   <header>
     <h1>👋 Hi, I’m Hamza</h1>
     <p>🚀 Data Science Learner | Python Developer | Future CSS Officer</p>
   </header>
 
-  <!-- Projects -->
   <section>
-    <h2>My Projects</h2>
+    <h2>💼 Projects</h2>
     <ul>
-      <li><b>📊 Student Performance Prediction</b> – Machine Learning project using Python & Scikit-learn.</li>
-      <li><b>💊 Pharmacy Management System</b> – Database + GUI system using SQL Server & Python.</li>
-      <li><b>🧑‍💻 Multi-Brain Collaborative IDE</b> – Final Year Project with real-time code collaboration.</li>
+      <li>📊 Student Performance Prediction (Python, ML)</li>
+      <li>💊 Pharmacy Management System (SQL + Python)</li>
+      <li>🧠 Multi-Brain Collaborative IDE (FYP)</li>
     </ul>
   </section>
 
-  <!-- Contact -->
   <section>
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/hamza123" target="_blank">github.com/hamza123</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/hamza123" target="_blank">linkedin.com/in/hamza123</a></p>
+    <h2>📞 Contact</h2>
+    <p>📧 Email: <a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
+    <p>🌐 GitHub: <a href="https://github.com/hamza123" target="_blank">github.com/hamza123</a></p>
+    <p>💼 LinkedIn: <a href="https://linkedin.com/in/hamza123" target="_blank">linkedin.com/in/hamza123</a></p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Hamza | Built with ❤️ in Python & Web</p>
+    <p>© 2025 Hamza | Built with ❤️ in HTML & CSS</p>
   </footer>
 </body>
 </html>
