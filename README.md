@@ -1,48 +1,61 @@
-<h1 align="center">👋 Hi, I'm Hamza</h1>
+<!-- Wavy animated banner -->
 <p align="center">
-  🚀 Data Science Enthusiast | 🐍 Python Developer | 📊 Machine Learning Learner
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00FFEE,100:0066FF&height=180&section=header&text=Hi%20I'm%20Hamza%20🚀&fontSize=40&fontColor=ffffff&animation=fadeIn" />
+</p>
+
+<!-- Typing animation -->
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=22&color=00F7FF&center=true&vCenter=true&width=500&lines=Data+Science+Enthusiast;Python+Developer;Machine+Learning+Learner;Future+Data+Scientist" />
 </p>
 
 ---
 
-## 🌐 Portfolio Website
-🔗 [Live Demo](https://YourUsername.github.io/hamza-portfolio/)
 
----
-
-## 📸 Preview
-<p align="center">
-  <img src="images/profile.jpg" alt="Hamza's Portfolio" width="250" style="border-radius:50%">
-</p>
+✨ Passionate about turning **data into insights**  
+📊 Currently working on **Data Science Projects**  
+🧠 Exploring **Machine Learning & AI**  
 
 ---
 
 ## 💼 Featured Projects
-- 📊 **Student Performance Prediction** (Python, Machine Learning)  
+- 📊 **Student Performance Prediction** (Python, ML)  
 - 💊 **Pharmacy Management System** (SQL + Python)  
-- 🧠 **Multi-Brain Collaborative IDE** (Final Year Project)  
+- 🧠 **Multi-Brain Collaborative IDE** (FYP)  
 
 ---
 
 ## 🛠️ Skills
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Data%20Visualization-4CAF50?style=for-the-badge&logo=plotly&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
+  <img src="https://skillicons.dev/icons?i=python,tensorflow,pandas,numpy,sklearn,sql,git,vscode&theme=light" />
+</p>
+
+---
+
+## 📊 GitHub Stats
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MuhammadHamzaDS&show_icons=true&theme=tokyonight" height="180"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MuhammadHamzaDS&theme=tokyonight" height="180"/>
+</p>
+
+---
+
+## 🌱 Contribution Graph
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MuhammadHamzaDS&theme=react-dark" />
 </p>
 
 ---
 
 ## 📞 Contact
-📧 Email: yourmail@example.com  
-🌐 GitHub: [github.com/hamza123](https://github.com/hamza123)  
-💼 LinkedIn: [linkedin.com/in/hamza123](https://linkedin.com/in/hamza123)  
+📧 **Email**: [hamzaali709x@gmail.com](mailto:hamzaali709x@gmail.com)  
+🌐 **GitHub**: [github.com/MuhammadHamzaDS](https://github.com/MuhammadHamzaDS)  
+💼 **LinkedIn**: [linkedin.com/in/muhammad-hamza-7246b8286](https://www.linkedin.com/in/muhammad-hamza-7246b8286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)  
+🌍 **Portfolio**: [MuhammadHamzaDS.github.io](https://MuhammadHamzaDS.github.io)  
+
 
 ---
 
+<!-- Footer Banner -->
 <p align="center">
-  ⭐ If you like this portfolio, don’t forget to star the repo!
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0066FF,100:00FFEE&height=100&section=footer" />
 </p>
