@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Hamza | Data Scientist</title>
   <style>
-    /* General Reset */
     * {
       margin: 0;
       padding: 0;
@@ -17,36 +16,59 @@
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: white;
       line-height: 1.6;
+      text-align: center;
     }
 
     /* Header Section */
     header {
-      text-align: center;
       padding: 50px 20px;
     }
 
     header img {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       border: 5px solid #00ffee;
       box-shadow: 0 0 25px #00ffee;
-      transition: transform 0.4s ease;
+      margin-bottom: 20px;
     }
 
-    header img:hover {
-      transform: scale(1.05);
-    }
-
-    header h1 {
-      margin-top: 20px;
-      font-size: 2.5rem;
+    .typing {
+      font-size: 2rem;
       color: #00ffee;
+      border-right: 3px solid #00ffee;
+      white-space: nowrap;
+      overflow: hidden;
+      margin: 0 auto;
+      width: 22ch; /* text length control */
+      animation: typing 4s steps(22), blink 0.5s step-end infinite alternate;
     }
 
-    header p {
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 22ch;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .subtitle {
       font-size: 1.2rem;
+      margin-top: 15px;
       color: #ccc;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     /* Section Styling */
@@ -54,6 +76,7 @@
       max-width: 1000px;
       margin: 50px auto;
       padding: 20px;
+      text-align: left;
     }
 
     h2 {
@@ -64,7 +87,6 @@
       display: inline-block;
     }
 
-    /* About */
     #about p {
       font-size: 1.1rem;
       color: #ddd;
@@ -141,8 +163,8 @@
   <!-- Header -->
   <header>
     <img src="images/WhatsApp Image 2025-09-11 at 10.08.45 AM.jpeg" alt="Muhammad Hamza">
-    <h1>Muhammad Hamza</h1>
-    <p>Data Scientist | AI Enthusiast | Problem Solver</p>
+    <h1 class="typing">Hi, I'm Muhammad Hamza 🚀</h1>
+    <p class="subtitle">Data Scientist | AI Enthusiast | Problem Solver</p>
   </header>
 
   <!-- About -->
@@ -206,4 +228,3 @@
 
 </body>
 </html>
-
