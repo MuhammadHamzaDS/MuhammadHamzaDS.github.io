@@ -2,121 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hamza's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Hamza | Data Scientist</title>
   <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
+    * {
       margin: 0;
       padding: 0;
-      text-align: center;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
     header {
-      padding: 50px 20px;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(120deg, #00ffcc, #0066ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeIn 2s ease-in-out;
     }
-
-    header img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #00eaff;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-      margin-bottom: 20px;
-    }
-
     header h1 {
-      font-size: 2.5rem;
-      margin: 10px 0;
+      font-size: 3rem;
     }
-
     header p {
       font-size: 1.2rem;
       color: #ddd;
     }
-
     section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transform: translateY(50px);
+      animation: slideUp 1.5s forwards;
     }
-
     h2 {
-      margin-bottom: 20px;
       font-size: 2rem;
-      border-bottom: 2px solid #00eaff;
-      display: inline-block;
-      padding-bottom: 5px;
+      margin-bottom: 20px;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc;
     }
-
-    ul {
-      list-style: none;
-      margin-top: 15px;
-      padding: 0;
-    }
-
     ul li {
       margin: 10px 0;
-      padding: 12px;
-      background: rgba(0, 234, 255, 0.1);
-      border-left: 5px solid #00eaff;
-      border-radius: 8px;
+      font-size: 1.1rem;
+      transition: transform 0.3s;
     }
-
-    a {
-      color: #00eaff;
+    ul li:hover {
+      transform: translateX(10px);
+      color: #00ffcc;
+    }
+    .links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: #00ffcc;
+      color: #000;
       text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
     }
-
-    a:hover {
-      color: #ff4081;
+    .links a:hover {
+      background: #0066ff;
+      color: #fff;
+      transform: scale(1.1);
     }
-
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(0,0,0,0.8);
-      margin-top: 40px;
-      font-size: 0.9rem;
+      margin-top: 50px;
       color: #aaa;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
   <header>
-    <!-- Profile Picture -->
-    <img src="images/WhatsApp Image 2025-09-11 at 10.08.45 AM.jpeg" alt="Hamza's Profile Picture">
-
-    <h1>👋 Hi, I’m Hamza</h1>
-    <p>🚀 Data Science Learner | Python Developer </p>
+    <h1>Muhammad Hamza 🚀</h1>
+    <p>Data Scientist | AI Enthusiast | Problem Solver</p>
+    <div class="links">
+      <a href="#">Portfolio</a>
+      <a href="https://linkedin.com/in/hamza">LinkedIn</a>
+      <a href="https://github.com/MuhammadHamzaDS">GitHub</a>
+    </div>
   </header>
 
   <section>
-    <h2>💼 Projects</h2>
+    <h2>About Me</h2>
+    <p>I am a passionate <b>Data Scientist</b> with a strong foundation in Python, Machine Learning, and Statistical Modeling. I specialize in solving real-world problems using <b>data-driven approaches</b> — from predictive analytics to AI-powered solutions.</p>
+  </section>
+
+  <section>
+    <h2>Tech Stack</h2>
     <ul>
-      <li>📊 Student Performance Prediction (Python, ML)</li>
-      <li>💊 Pharmacy Management System (SQL + Python)</li>
-      <li>🧠 Multi-Brain Collaborative IDE (FYP)</li>
+      <li><b>Languages:</b> Python, R, SQL, JavaScript</li>
+      <li><b>Libraries/Tools:</b> Pandas, NumPy, Scikit-Learn, TensorFlow, PyTorch, Matplotlib</li>
+      <li><b>Databases:</b> SQL Server, Firebase, BigQuery</li>
+      <li><b>Other:</b> Tableau, Power BI, Git/GitHub</li>
     </ul>
   </section>
 
   <section>
-    <h2>📞 Contact</h2>
-    <p>📧 Email: <a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
-    <p>🌐 GitHub: <a href="https://github.com/hamza123" target="_blank">github.com/hamza123</a></p>
-    <p>💼 LinkedIn: <a href="https://linkedin.com/in/hamza123" target="_blank">linkedin.com/in/hamza123</a></p>
+    <h2>Projects</h2>
+    <ul>
+      <li><b>Student Performance Prediction:</b> ML model predicting student outcomes. [<a href="#">Repo</a>]</li>
+      <li><b>Pharmacy Management System:</b> SQL + Python GUI app. [<a href="#">Repo</a>]</li>
+      <li><b>R Shiny Dashboard:</b> Interactive data visualization app. [<a href="#">Repo</a>]</li>
+      <li><b>Collaborative IDE:</b> Multi-user coding platform with AI. [<a href="#">Repo</a>]</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Achievements</h2>
+    <ul>
+      <li>🏆 Built 10+ ML/DL projects and deployed end-to-end solutions</li>
+      <li>📈 Kaggle participant & open-source contributor</li>
+      <li>🎯 Bridging Data Science with Software Engineering</li>
+    </ul>
   </section>
 
   <footer>
-    <p>© 2025 Hamza | Built with ❤️ in HTML & CSS</p>
+    <p>📩 yourmail@gmail.com | 🌍 Portfolio | 💼 LinkedIn | 🐙 GitHub</p>
   </footer>
 </body>
 </html>
-
-
-
