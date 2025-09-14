@@ -5,135 +5,204 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Hamza | Data Scientist</title>
   <style>
+    /* General Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
     }
+
     body {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      overflow-x: hidden;
+      color: white;
+      line-height: 1.6;
     }
+
+    /* Header Section */
     header {
       text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(120deg, #00ffcc, #0066ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: fadeIn 2s ease-in-out;
+      padding: 50px 20px;
     }
+
+    header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #00ffee;
+      box-shadow: 0 0 25px #00ffee;
+      transition: transform 0.4s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
     header h1 {
-      font-size: 3rem;
+      margin-top: 20px;
+      font-size: 2.5rem;
+      color: #00ffee;
     }
+
     header p {
       font-size: 1.2rem;
-      color: #ddd;
+      color: #ccc;
     }
+
+    /* Section Styling */
     section {
       max-width: 1000px;
       margin: 50px auto;
       padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transform: translateY(50px);
-      animation: slideUp 1.5s forwards;
     }
+
     h2 {
       font-size: 2rem;
+      color: #00ffee;
       margin-bottom: 20px;
-      color: #00ffcc;
-      text-shadow: 0 0 10px #00ffcc;
+      border-bottom: 2px solid #00ffee;
+      display: inline-block;
     }
-    ul li {
-      margin: 10px 0;
+
+    /* About */
+    #about p {
       font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skill {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
       transition: transform 0.3s;
     }
-    ul li:hover {
-      transform: translateX(10px);
-      color: #00ffcc;
-    }
-    .links a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      border-radius: 30px;
-      background: #00ffcc;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .links a:hover {
-      background: #0066ff;
-      color: #fff;
+
+    .skill:hover {
       transform: scale(1.1);
+      background: #00ffee;
+      color: black;
     }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      background: rgba(0, 255, 238, 0.2);
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #00ffee;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: white;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
-      margin-top: 50px;
+      background: #0f2027;
       color: #aaa;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideUp {
-      to { transform: translateY(0); opacity: 1; }
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Muhammad Hamza 🚀</h1>
+    <img src="images/WhatsApp Image 2025-09-11 at 10.08.45 AM.jpeg" alt="Muhammad Hamza">
+    <h1>Muhammad Hamza</h1>
     <p>Data Scientist | AI Enthusiast | Problem Solver</p>
-    <div class="links">
-      <a href="#">Portfolio</a>
-      <a href="https://linkedin.com/in/hamza">LinkedIn</a>
-      <a href="https://github.com/MuhammadHamzaDS">GitHub</a>
-    </div>
   </header>
 
-  <section>
+  <!-- About -->
+  <section id="about">
     <h2>About Me</h2>
-    <p>I am a passionate <b>Data Scientist</b> with a strong foundation in Python, Machine Learning, and Statistical Modeling. I specialize in solving real-world problems using <b>data-driven approaches</b> — from predictive analytics to AI-powered solutions.</p>
+    <p>
+      I am Muhammad Hamza, a passionate Data Scientist with a focus on solving real-world problems using
+      data-driven approaches. Skilled in Python, Machine Learning, and AI, I aim to bring impact through
+      innovation, research, and practical solutions.
+    </p>
   </section>
 
-  <section>
-    <h2>Tech Stack</h2>
-    <ul>
-      <li><b>Languages:</b> Python, R, SQL, JavaScript</li>
-      <li><b>Libraries/Tools:</b> Pandas, NumPy, Scikit-Learn, TensorFlow, PyTorch, Matplotlib</li>
-      <li><b>Databases:</b> SQL Server, Firebase, BigQuery</li>
-      <li><b>Other:</b> Tableau, Power BI, Git/GitHub</li>
-    </ul>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Deep Learning</div>
+      <div class="skill">Data Visualization</div>
+      <div class="skill">R Programming</div>
+      <div class="skill">TensorFlow / PyTorch</div>
+      <div class="skill">Django</div>
+    </div>
   </section>
 
-  <section>
+  <!-- Projects -->
+  <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li><b>Student Performance Prediction:</b> ML model predicting student outcomes. [<a href="#">Repo</a>]</li>
-      <li><b>Pharmacy Management System:</b> SQL + Python GUI app. [<a href="#">Repo</a>]</li>
-      <li><b>R Shiny Dashboard:</b> Interactive data visualization app. [<a href="#">Repo</a>]</li>
-      <li><b>Collaborative IDE:</b> Multi-user coding platform with AI. [<a href="#">Repo</a>]</li>
-    </ul>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Student Performance Prediction</h3>
+        <p>Built a machine learning model to predict student outcomes based on multiple features.</p>
+      </div>
+      <div class="project-card">
+        <h3>Pharmacy Management System</h3>
+        <p>Database-driven system with GUI for pharmacy operations, developed using Python & SQL.</p>
+      </div>
+      <div class="project-card">
+        <h3>AI Personal Assistant</h3>
+        <p>Developed a Jarvis-style assistant integrating AI models with web technologies.</p>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Achievements</h2>
-    <ul>
-      <li>🏆 Built 10+ ML/DL projects and deployed end-to-end solutions</li>
-      <li>📈 Kaggle participant & open-source contributor</li>
-      <li>🎯 Bridging Data Science with Software Engineering</li>
-    </ul>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:your-email@gmail.com">Email</a>
+      <a href="https://github.com/MuhammadHamzaDS" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>📩 yourmail@gmail.com | 🌍 Portfolio | 💼 LinkedIn | 🐙 GitHub</p>
+    <p>&copy; 2025 Muhammad Hamza | All Rights Reserved</p>
   </footer>
+
 </body>
 </html>
