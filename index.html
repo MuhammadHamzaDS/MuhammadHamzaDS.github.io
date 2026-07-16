@@ -2,232 +2,989 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Muhammad Hamza's Data Science portfolio featuring machine learning, data analysis, AI, Python, SQL, and real-world projects."
+  >
+
+  <meta name="author" content="Muhammad Hamza">
+
   <title>Muhammad Hamza | Data Scientist</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
 
-    body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      line-height: 1.6;
-      text-align: center;
-    }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
-    /* Header Section */
-    header {
-      padding: 50px 20px;
-    }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-    header img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 5px solid #00ffee;
-      box-shadow: 0 0 25px #00ffee;
-      margin-bottom: 20px;
-    }
+  <!-- Icons -->
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  >
 
-    .typing {
-      font-size: 2rem;
-      color: #00ffee;
-      border-right: 3px solid #00ffee;
-      white-space: nowrap;
-      overflow: hidden;
-      margin: 0 auto;
-      width: 22ch; /* text length control */
-      animation: typing 4s steps(22), blink 0.5s step-end infinite alternate;
-    }
-
-    @keyframes typing {
-      from {
-        width: 0;
-      }
-      to {
-        width: 22ch;
-      }
-    }
-
-    @keyframes blink {
-      50% {
-        border-color: transparent;
-      }
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      margin-top: 15px;
-      color: #ccc;
-      animation: fadeIn 3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Section Styling */
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 20px;
-      text-align: left;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #00ffee;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #00ffee;
-      display: inline-block;
-    }
-
-    #about p {
-      font-size: 1.1rem;
-      color: #ddd;
-    }
-
-    /* Skills */
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .skill {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-weight: bold;
-      transition: transform 0.3s;
-    }
-
-    .skill:hover {
-      transform: scale(1.1);
-      background: #00ffee;
-      color: black;
-    }
-
-    /* Projects */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .project-card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 15px;
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-      background: rgba(0, 255, 238, 0.2);
-    }
-
-    /* Contact */
-    .contact {
-      text-align: center;
-    }
-
-    .contact a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #00ffee;
-      font-size: 1.3rem;
-      transition: color 0.3s ease;
-    }
-
-    .contact a:hover {
-      color: white;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0f2027;
-      color: #aaa;
-      margin-top: 50px;
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <img src="images/WhatsApp_Image_2025-11-30_at_10.08.17_AM-removebg-preview-Photoroom.png" alt="Muhammad Hamza">
-    <h1 class="typing">Hi, I'm Muhammad Hamza 🚀</h1>
-    <p class="subtitle">Data Scientist | AI Enthusiast | Problem Solver</p>
-  </header>
+  <!-- Animated background -->
+  <canvas id="particleCanvas"></canvas>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am Muhammad Hamza, a passionate Data Scientist with a focus on solving real-world problems using
-      data-driven approaches. Skilled in Python, Machine Learning, and AI, I aim to bring impact through
-      innovation, research, and practical solutions.
-    </p>
-  </section>
+  <div class="noise-overlay"></div>
+  <div class="cursor-glow"></div>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">Python</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Machine Learning</div>
-      <div class="skill">Deep Learning</div>
-      <div class="skill">Data Visualization</div>
-      <div class="skill">R Programming</div>
-      <div class="skill">TensorFlow / PyTorch</div>
-      <div class="skill">Django</div>
+  <!-- Page loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">
+      Hamza<span>.DS</span>
     </div>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Student Performance Prediction</h3>
-        <p>Built a machine learning model to predict student outcomes based on multiple features.</p>
-      </div>
-      <div class="project-card">
-        <h3>Pharmacy Management System</h3>
-        <p>Database-driven system with GUI for pharmacy operations, developed using Python & SQL.</p>
-      </div>
-      <div class="project-card">
-        <h3>AI Personal Assistant</h3>
-        <p>Developed a Jarvis-style assistant integrating AI models with web technologies.</p>
-      </div>
+    <div class="loader-line">
+      <span></span>
     </div>
-  </section>
+  </div>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <a href="hamzaali709x@gmail.com">Email</a>
-      <a href="https://github.com/MuhammadHamzaDS" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/muhammad-hamza-7246b8286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+
+      <a href="#home" class="logo">
+        Hamza<span>.DS</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+
+        <li>
+          <a href="#contact" class="nav-contact">
+            Let's Talk
+          </a>
+        </li>
+      </ul>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
     </div>
-  </section>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <header class="hero" id="home">
+
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+
+      <div class="container hero-container">
+
+        <div class="hero-content">
+
+          <div class="availability-badge hero-reveal">
+            <span class="status-dot"></span>
+            Open to Data Science Opportunities
+          </div>
+
+          <p class="hero-intro hero-reveal">
+            Hello, I'm Muhammad Hamza
+          </p>
+
+          <h1 class="hero-heading hero-reveal">
+            I transform
+            <span class="gradient-text">raw data</span>
+            into intelligent digital solutions.
+          </h1>
+
+          <div class="typing-wrapper hero-reveal">
+            <span>I build </span>
+            <span id="typingText" class="typing-text"></span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-description hero-reveal">
+            Aspiring Data Scientist and AI Engineer focused on machine
+            learning, data analysis, predictive systems, interactive
+            dashboards, and real-world problem solving.
+          </p>
+
+          <div class="hero-buttons hero-reveal">
+
+            <a href="#projects" class="btn btn-primary magnetic">
+              <span>Explore Projects</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </a>
+
+            <a
+              href="assets/Muhammad-Hamza-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary magnetic"
+            >
+              <i class="bx bx-file"></i>
+              <span>View Resume</span>
+            </a>
+
+          </div>
+
+          <div class="social-links hero-reveal">
+
+            <a
+              href="https://github.com/MuhammadHamzaDS"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              class="social-link magnetic"
+            >
+              <i class="bx bxl-github"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/muhammad-hamza-7246b8286/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              class="social-link magnetic"
+            >
+              <i class="bx bxl-linkedin"></i>
+            </a>
+
+            <a
+              href="mailto:hamzaali709x@gmail.com"
+              aria-label="Email"
+              class="social-link magnetic"
+            >
+              <i class="bx bx-envelope"></i>
+            </a>
+
+          </div>
+
+          <div class="hero-stats hero-reveal">
+
+            <div class="stat-item">
+              <h3 data-counter="6">0</h3>
+              <p>Projects Built</p>
+            </div>
+
+            <div class="stat-line"></div>
+
+            <div class="stat-item">
+              <h3 data-counter="12">0</h3>
+              <p>Technologies</p>
+            </div>
+
+            <div class="stat-line"></div>
+
+            <div class="stat-item">
+              <h3 data-counter="100">0</h3>
+              <p>Learning Mindset</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="hero-visual hero-reveal">
+
+          <div class="profile-scene" id="profileScene">
+
+            <div class="profile-ring ring-one"></div>
+            <div class="profile-ring ring-two"></div>
+
+            <div class="floating-chip chip-python">
+              <i class="bx bxl-python"></i>
+              Python
+            </div>
+
+            <div class="floating-chip chip-ai">
+              <i class="bx bx-brain"></i>
+              AI
+            </div>
+
+            <div class="floating-chip chip-data">
+              <i class="bx bx-bar-chart-alt-2"></i>
+              Data
+            </div>
+
+            <div class="profile-card tilt-card">
+
+              <div class="profile-image">
+                <img
+                  src="images/WhatsApp_Image_2025-11-30_at_10.08.17_AM-removebg-preview-Photoroom.png"
+                  alt="Muhammad Hamza"
+                >
+
+                <div class="image-shine"></div>
+              </div>
+
+              <div class="profile-info">
+                <div>
+                  <p class="profile-role">Data Scientist</p>
+                  <h2>Muhammad Hamza</h2>
+                </div>
+
+                <div class="profile-icon">
+                  <i class="bx bx-code-alt"></i>
+                </div>
+              </div>
+
+              <div class="profile-bottom">
+                <span>
+                  <i class="bx bx-map"></i>
+                  Pakistan
+                </span>
+
+                <span class="online-text">
+                  <i class="bx bxs-circle"></i>
+                  Available
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <a href="#about" class="scroll-indicator">
+        <span>Scroll</span>
+
+        <div class="scroll-line">
+          <span></span>
+        </div>
+      </a>
+
+    </header>
+
+    <!-- About -->
+    <section class="section about-section" id="about">
+
+      <div class="section-glow section-glow-left"></div>
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <p class="section-label">
+            01 — About Me
+          </p>
+
+          <h2 class="section-title">
+            Building practical solutions at the intersection of
+            <span class="gradient-text">data and intelligence.</span>
+          </h2>
+
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-content reveal-left">
+
+            <p class="large-paragraph">
+              I'm Muhammad Hamza, a BS Computer Science student building
+              my career in Data Science, Machine Learning, and Artificial
+              Intelligence.
+            </p>
+
+            <p>
+              I enjoy converting complex datasets into meaningful insights,
+              predictive models, interactive dashboards, and useful digital
+              products. My learning approach is based on practical projects,
+              consistent experimentation, and solving real problems.
+            </p>
+
+            <p>
+              My current focus includes Python, SQL, data analysis, machine
+              learning, visualization, Streamlit, GitHub, and AI-powered
+              applications.
+            </p>
+
+            <div class="about-actions">
+
+              <a href="#projects" class="text-link">
+                View my projects
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+
+              <a
+                href="mailto:hamzaali709x@gmail.com"
+                class="text-link"
+              >
+                Contact me
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="about-services">
+
+            <article class="service-card reveal tilt-card">
+              <div class="service-number">01</div>
+
+              <div class="service-icon">
+                <i class="bx bx-line-chart"></i>
+              </div>
+
+              <h3>Data Analysis</h3>
+
+              <p>
+                Cleaning, exploring, visualizing, and interpreting data
+                to discover patterns and useful insights.
+              </p>
+            </article>
+
+            <article class="service-card reveal tilt-card">
+              <div class="service-number">02</div>
+
+              <div class="service-icon">
+                <i class="bx bx-brain"></i>
+              </div>
+
+              <h3>Machine Learning</h3>
+
+              <p>
+                Building and evaluating predictive models for practical
+                classification and regression problems.
+              </p>
+            </article>
+
+            <article class="service-card reveal tilt-card">
+              <div class="service-number">03</div>
+
+              <div class="service-icon">
+                <i class="bx bx-code-block"></i>
+              </div>
+
+              <h3>Development</h3>
+
+              <p>
+                Creating data-driven Python applications, dashboards,
+                automated systems, and interactive tools.
+              </p>
+            </article>
+
+            <article class="service-card reveal tilt-card">
+              <div class="service-number">04</div>
+
+              <div class="service-icon">
+                <i class="bx bx-bulb"></i>
+              </div>
+
+              <h3>Problem Solving</h3>
+
+              <p>
+                Breaking complex challenges into clear, logical, and
+                practical technical solutions.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section tech-section" id="tech-stack">
+
+      <div class="section-glow section-glow-right"></div>
+
+      <div class="container">
+
+        <div class="section-header center reveal">
+
+          <p class="section-label">
+            02 — Tech Stack
+          </p>
+
+          <h2 class="section-title">
+            Tools I use to turn
+            <span class="gradient-text">ideas into solutions.</span>
+          </h2>
+
+          <p class="section-subtitle">
+            A growing collection of technologies I use for programming,
+            analytics, machine learning, visualization, and development.
+          </p>
+
+        </div>
+
+        <div class="tech-grid">
+
+          <article class="tech-category reveal">
+
+            <div class="tech-category-header">
+              <div class="category-icon">
+                <i class="bx bx-code-alt"></i>
+              </div>
+
+              <div>
+                <span>Core</span>
+                <h3>Programming</h3>
+              </div>
+            </div>
+
+            <div class="tech-items">
+
+              <div class="tech-item">
+                <i class="bx bxl-python"></i>
+                <span>Python</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-data"></i>
+                <span>SQL</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-code-curly"></i>
+                <span>R Programming</span>
+              </div>
+
+            </div>
+
+          </article>
+
+          <article class="tech-category reveal">
+
+            <div class="tech-category-header">
+              <div class="category-icon">
+                <i class="bx bx-bar-chart-square"></i>
+              </div>
+
+              <div>
+                <span>Insights</span>
+                <h3>Data Analysis</h3>
+              </div>
+            </div>
+
+            <div class="tech-items">
+
+              <div class="tech-item">
+                <i class="bx bx-table"></i>
+                <span>Pandas</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-math"></i>
+                <span>NumPy</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-line-chart"></i>
+                <span>Matplotlib</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-pie-chart-alt-2"></i>
+                <span>Power BI</span>
+              </div>
+
+            </div>
+
+          </article>
+
+          <article class="tech-category reveal">
+
+            <div class="tech-category-header">
+              <div class="category-icon">
+                <i class="bx bx-brain"></i>
+              </div>
+
+              <div>
+                <span>Intelligence</span>
+                <h3>Machine Learning</h3>
+              </div>
+            </div>
+
+            <div class="tech-items">
+
+              <div class="tech-item">
+                <i class="bx bx-network-chart"></i>
+                <span>Scikit-learn</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-trending-up"></i>
+                <span>Regression</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-category"></i>
+                <span>Classification</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-check-shield"></i>
+                <span>Evaluation</span>
+              </div>
+
+            </div>
+
+          </article>
+
+          <article class="tech-category reveal">
+
+            <div class="tech-category-header">
+              <div class="category-icon">
+                <i class="bx bx-cog"></i>
+              </div>
+
+              <div>
+                <span>Workflow</span>
+                <h3>Tools & Platforms</h3>
+              </div>
+            </div>
+
+            <div class="tech-items">
+
+              <div class="tech-item">
+                <i class="bx bxl-git"></i>
+                <span>Git</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bxl-github"></i>
+                <span>GitHub</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-data"></i>
+                <span>MySQL</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-code-block"></i>
+                <span>Jupyter</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-window"></i>
+                <span>VS Code</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="bx bx-globe"></i>
+                <span>Streamlit</span>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects-section" id="projects">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <p class="section-label">
+            03 — Featured Projects
+          </p>
+
+          <h2 class="section-title">
+            Projects built with
+            <span class="gradient-text">code, data, and curiosity.</span>
+          </h2>
+
+          <p class="section-subtitle">
+            Real-world projects demonstrating machine learning, data
+            analytics, automation, database integration, and development.
+          </p>
+
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal tilt-card">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                01
+              </div>
+
+              <div class="project-links">
+
+                <a
+                  href="https://github.com/MuhammadHamzaDS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View GitHub repository"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+
+                <a
+                  href="#"
+                  aria-label="View live project"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="project-icon">
+              <i class="bx bx-line-chart"></i>
+            </div>
+
+            <p class="project-category">
+              Machine Learning
+            </p>
+
+            <h3>
+              Student Performance Prediction
+            </h3>
+
+            <p class="project-description">
+              A regression-based machine learning application that predicts
+              students' final marks using study hours, attendance,
+              assignments, quizzes, and midterm performance.
+            </p>
+
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Scikit-learn</span>
+              <span>Streamlit</span>
+            </div>
+
+          </article>
+
+          <article class="project-card reveal tilt-card">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                02
+              </div>
+
+              <div class="project-links">
+
+                <a
+                  href="https://github.com/MuhammadHamzaDS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View GitHub repository"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+
+                <a href="#" aria-label="View live project">
+                  <i class="bx bx-link-external"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="project-icon">
+              <i class="bx bx-globe"></i>
+            </div>
+
+            <p class="project-category">
+              Data Engineering
+            </p>
+
+            <h3>
+              Generating Insights From Web Scraping
+            </h3>
+
+            <p class="project-description">
+              A complete data pipeline that scrapes web content, stores it
+              in MySQL, cleans the collected information, and generates
+              visual insights.
+            </p>
+
+            <div class="project-tech">
+              <span>Python</span>
+              <span>BeautifulSoup</span>
+              <span>MySQL</span>
+              <span>Matplotlib</span>
+            </div>
+
+          </article>
+
+          <article class="project-card reveal tilt-card">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                03
+              </div>
+
+              <div class="project-links">
+
+                <a
+                  href="https://github.com/MuhammadHamzaDS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View GitHub repository"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+
+                <a href="#" aria-label="View live project">
+                  <i class="bx bx-link-external"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="project-icon">
+              <i class="bx bx-scan"></i>
+            </div>
+
+            <p class="project-category">
+              Computer Vision
+            </p>
+
+            <h3>
+              Python Webcam Scanner
+            </h3>
+
+            <p class="project-description">
+              A webcam-based QR and barcode scanning application that
+              detects encoded information and stores scanned records
+              in a MySQL database.
+            </p>
+
+            <div class="project-tech">
+              <span>Python</span>
+              <span>OpenCV</span>
+              <span>MySQL</span>
+              <span>QR Scanner</span>
+            </div>
+
+          </article>
+
+          <article class="project-card reveal tilt-card">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                04
+              </div>
+
+              <div class="project-links">
+
+                <a
+                  href="https://github.com/MuhammadHamzaDS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View GitHub repository"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+
+                <a href="#" aria-label="View live project">
+                  <i class="bx bx-link-external"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="project-icon">
+              <i class="bx bxl-youtube"></i>
+            </div>
+
+            <p class="project-category">
+              Exploratory Data Analysis
+            </p>
+
+            <h3>
+              YouTube Trending Videos Analysis
+            </h3>
+
+            <p class="project-description">
+              An exploratory data analysis project examining video views,
+              likes, engagement, categories, and relationships between
+              major performance metrics.
+            </p>
+
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Matplotlib</span>
+              <span>EDA</span>
+            </div>
+
+          </article>
+
+        </div>
+
+        <div class="projects-footer reveal">
+
+          <a
+            href="https://github.com/MuhammadHamzaDS"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary magnetic"
+          >
+            <i class="bx bxl-github"></i>
+            View All Repositories
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+
+      <div class="contact-glow"></div>
+
+      <div class="container">
+
+        <div class="contact-card reveal">
+
+          <div class="contact-content">
+
+            <p class="section-label">
+              04 — Contact
+            </p>
+
+            <h2>
+              Have an idea, opportunity, or project?
+              <span class="gradient-text">Let's build something meaningful.</span>
+            </h2>
+
+            <p>
+              I'm open to internships, collaborations, freelance projects,
+              and conversations related to Data Science, Machine Learning,
+              Python, and Artificial Intelligence.
+            </p>
+
+            <div class="contact-buttons">
+
+              <a
+                href="mailto:hamzaali709x@gmail.com"
+                class="btn btn-primary magnetic"
+              >
+                <i class="bx bx-envelope"></i>
+                Send an Email
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/muhammad-hamza-7246b8286/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary magnetic"
+              >
+                <i class="bx bxl-linkedin"></i>
+                Connect on LinkedIn
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="contact-decoration">
+            <div class="contact-circle">
+              <i class="bx bx-message-rounded-dots"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Muhammad Hamza | All Rights Reserved</p>
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+      <a href="#home" class="footer-logo">
+        Hamza<span>.DS</span>
+      </a>
+
+      <p>
+        Designed and built by Muhammad Hamza.
+        © <span id="currentYear"></span>
+      </p>
+
+      <div class="footer-links">
+
+        <a
+          href="https://github.com/MuhammadHamzaDS"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="bx bxl-github"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/muhammad-hamza-7246b8286/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="bx bxl-linkedin"></i>
+        </a>
+
+        <a href="#home" aria-label="Back to top">
+          <i class="bx bx-up-arrow-alt"></i>
+        </a>
+
+      </div>
+
+    </div>
+
   </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
 
 </body>
 </html>
-
-
-
